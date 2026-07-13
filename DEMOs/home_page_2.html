@@ -1,0 +1,480 @@
+<!-- Save as index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LeUnes Law Firm | Personal Injury Attorney</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #111;
+      background: #fff;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #d4a017;
+      color: #111;
+      padding: 16px 28px;
+      font-weight: 800;
+      text-decoration: none;
+      border-radius: 6px;
+      text-align: center;
+    }
+
+    .hero {
+      background: #061b33;
+      color: white;
+      padding: 80px 0 140px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: 60px;
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+
+    .hero h2 {
+      font-size: 32px;
+      color: #d4a017;
+      margin-bottom: 25px;
+    }
+
+    .hero ul {
+      list-style: none;
+      margin-bottom: 25px;
+      font-size: 19px;
+      font-weight: 700;
+    }
+
+    .hero li {
+      margin-bottom: 10px;
+    }
+
+    .phone-btn {
+      font-size: 22px;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .case-form {
+      background: white;
+      color: #111;
+      padding: 25px;
+      border-radius: 10px;
+      max-width: 430px;
+    }
+
+    .case-form h3 {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    .case-form input,
+    .case-form textarea {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 12px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .case-form button {
+      width: 100%;
+      border: none;
+      cursor: pointer;
+    }
+
+    .hero-photo img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .reviews-peek {
+      margin-top: -75px;
+      position: relative;
+      z-index: 5;
+    }
+
+    .review-box {
+      background: white;
+      padding: 35px;
+      border-radius: 14px;
+      box-shadow: 0 20px 45px rgba(0,0,0,0.18);
+      text-align: center;
+    }
+
+    .stars {
+      color: #d4a017;
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 42px;
+      color: #061b33;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: #f5f7fa;
+      padding: 35px 25px;
+      border-radius: 10px;
+      border-top: 6px solid #d4a017;
+    }
+
+    .card h3 {
+      font-size: 24px;
+      color: #061b33;
+      margin-bottom: 10px;
+    }
+
+    .dark-section {
+      background: #061b33;
+      color: white;
+    }
+
+    .dark-section h2 {
+      color: white;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+    }
+
+    .why-card {
+      background: rgba(255,255,255,0.08);
+      padding: 30px;
+      border-radius: 10px;
+    }
+
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+      text-align: center;
+    }
+
+    .result h3 {
+      font-size: 48px;
+      color: #d4a017;
+    }
+
+    .attorney-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .attorney-grid img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .faq {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #ddd;
+      padding: 22px 0;
+    }
+
+    .faq-item h3 {
+      color: #061b33;
+      margin-bottom: 8px;
+    }
+
+    .final-cta {
+      background: #d4a017;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .final-cta h2 {
+      font-size: 48px;
+      margin-bottom: 15px;
+      color: #061b33;
+    }
+
+    .final-cta .btn {
+      background: #061b33;
+      color: white;
+      margin-top: 25px;
+    }
+
+    .sticky-call {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #d4a017;
+      color: #111;
+      padding: 16px 24px;
+      border-radius: 999px;
+      font-weight: 900;
+      text-decoration: none;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+      z-index: 999;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .attorney-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cards,
+      .why-grid,
+      .results-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .hero h2 {
+        font-size: 26px;
+      }
+
+      .sticky-call {
+        left: 20px;
+        right: 20px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="hero">
+    <div class="container hero-grid">
+
+      <div>
+        <h1>Injured In An Accident?</h1>
+        <h2>Call Now To Maximize Your Recovery</h2>
+
+        <ul>
+          <li>✓ No Fee Unless We Win</li>
+          <li>✓ Free Consultation</li>
+          <li>✓ Former Defense Attorney</li>
+          <li>✓ Available Today</li>
+        </ul>
+
+        <a href="tel:0000000000" class="btn phone-btn">Call Now: (000) 000-0000</a>
+
+        <form class="case-form">
+          <h3>Free Case Review</h3>
+          <input type="text" placeholder="Your Name">
+          <input type="tel" placeholder="Phone Number">
+          <textarea placeholder="Tell us what happened"></textarea>
+          <button class="btn">Submit My Case</button>
+        </form>
+      </div>
+
+      <div class="hero-photo">
+        <img src="christopher-photo.jpg" alt="Christopher LeUnes">
+      </div>
+
+    </div>
+  </section>
+
+  <div class="reviews-peek">
+    <div class="container">
+      <div class="review-box">
+        <div class="stars">★★★★★</div>
+        <h2>Trusted By Injured Texans</h2>
+        <p>5-star Google reviews from clients who needed serious help after serious accidents.</p>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <h2>Personal Injury Cases We Handle</h2>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Auto Accidents</h3>
+          <p>Injured in a car crash? We help you fight for compensation.</p>
+        </div>
+
+        <div class="card">
+          <h3>Truck Accidents</h3>
+          <p>Serious trucking cases require serious legal representation.</p>
+        </div>
+
+        <div class="card">
+          <h3>Industrial Injuries</h3>
+          <p>Workplace and industrial accidents can change your life overnight.</p>
+        </div>
+
+        <div class="card">
+          <h3>Premises Liability</h3>
+          <p>Injured on someone else's property? You may have a claim.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dark-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Why Insurance Companies Don't Want You Hiring Us</h2>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card">
+          <h3>Former Defense Attorney</h3>
+          <p>Christopher understands how the other side thinks.</p>
+        </div>
+
+        <div class="why-card">
+          <h3>Knows Their Strategies</h3>
+          <p>We know how insurance companies try to reduce claims.</p>
+        </div>
+
+        <div class="why-card">
+          <h3>Experienced Negotiator</h3>
+          <p>We fight to maximize the value of your case.</p>
+        </div>
+
+        <div class="why-card">
+          <h3>Litigation Ready</h3>
+          <p>If they don't treat you fairly, we are ready to take action.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <h2>Results That Speak For Themselves</h2>
+      </div>
+
+      <div class="results-grid">
+        <div class="result">
+          <h3>$1.2M</h3>
+          <p>Serious Injury Case</p>
+        </div>
+
+        <div class="result">
+          <h3>$850K</h3>
+          <p>Truck Accident</p>
+        </div>
+
+        <div class="result">
+          <h3>$500K</h3>
+          <p>Workplace Injury</p>
+        </div>
+
+        <div class="result">
+          <h3>$300K</h3>
+          <p>Premises Liability</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container attorney-grid">
+      <div>
+        <img src="christopher-photo-2.jpg" alt="Attorney Christopher LeUnes">
+      </div>
+
+      <div>
+        <h2>Meet Christopher LeUnes</h2>
+        <p>
+          Christopher LeUnes has more than 16 years of personal injury experience and previously worked on the defense side.
+          That background gives him a strong understanding of how insurance companies evaluate, delay, and fight injury claims.
+        </p>
+        <br>
+        <p>
+          Today, he uses that experience to help injured Texans recover compensation after auto accidents, truck accidents,
+          workplace injuries, and serious injury cases.
+        </p>
+        <br>
+        <a href="#" class="btn">Meet Christopher</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <h2>Frequently Asked Questions</h2>
+      </div>
+
+      <div class="faq">
+        <div class="faq-item">
+          <h3>How much does it cost?</h3>
+          <p>You pay no attorney fee unless we win your case.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>How long will my case take?</h3>
+          <p>Every case is different, but we work to move your claim forward as quickly and effectively as possible.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Should I talk to the insurance company?</h3>
+          <p>You should speak with an attorney first so you do not say anything that could hurt your claim.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <h2>Don't Wait After An Accident</h2>
+    <p>Call now for a free consultation and find out how LeUnes Law Firm can help.</p>
+    <a href="tel:0000000000" class="btn">Call Now: (000) 000-0000</a>
+  </section>
+
+  <a href="tel:0000000000" class="sticky-call">Call Now</a>
+
+</body>
+</html>

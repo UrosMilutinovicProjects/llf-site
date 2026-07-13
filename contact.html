@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Contact | LeUnes Law Firm</title>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="homepage.html" class="logo-link" aria-label="LeUnes Law Firm Home">
+        <img src="assets/leunes-logo.png" alt="LeUnes Law Firm Logo" class="site-logo" />
+      </a>
+
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="homepage.html" class="nav-link" data-en="Home" data-es="Inicio">Home</a>
+        <a href="about.html" class="nav-link" data-en="About Us" data-es="Sobre Nosotros">About Us</a>
+        <a href="case-results.html" class="nav-link" data-en="Case Results" data-es="Resultados">Case Results</a>
+        <a href="practice-areas.html" class="nav-link" data-en="Practice Areas" data-es="Áreas De Práctica">Practice Areas</a>
+        <a href="recources.html" class="nav-link" data-en="Resources" data-es="Recursos">Resources</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="language-toggle" id="languageToggle" type="button">Español</button>
+        <a href="contact.html" class="contact-button" data-en="Contact" data-es="Contacto">Contact</a>
+      </div>
+
+      <button class="mobile-menu-button" id="mobileMenuButton" aria-label="Open menu" type="button">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+      <a href="homepage.html" class="mobile-nav-link" data-en="Home" data-es="Inicio">Home</a>
+      <a href="about.html" class="mobile-nav-link" data-en="About Us" data-es="Sobre Nosotros">About Us</a>
+      <a href="case-results.html" class="mobile-nav-link" data-en="Case Results" data-es="Resultados">Case Results</a>
+      <a href="practice-areas.html" class="mobile-nav-link" data-en="Practice Areas" data-es="Áreas De Práctica">Practice Areas</a>
+      <a href="recources.html" class="mobile-nav-link" data-en="Resources" data-es="Recursos">Resources</a>
+      <a href="contact.html" class="mobile-nav-link active" data-en="Contact" data-es="Contacto">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact-hero-section">
+      <div class="contact-hero-inner">
+        <div class="contact-hero-text">
+          <p class="page-label">Contact</p>
+          <h1>Speak Directly With LeUnes Law Firm.</h1>
+          <p>
+            If you were injured in Texas, start with a free consultation. Share a few details and receive clear next steps from a team that handles personal injury matters with direct communication and personal attention.
+          </p>
+
+          <div class="contact-quick-actions">
+            <a href="tel:+10000000000" class="hero-button">Call Now</a>
+            <a href="mailto:info@leuneslaw.com" class="secondary-contact-link">Email The Firm</a>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <h2>Free Consultation</h2>
+          <p>Tell us what happened and how to reach you.</p>
+
+          <form class="contact-form" action="#" method="post">
+            <div class="form-row">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Your name" />
+            </div>
+
+            <div class="form-row">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" placeholder="(000) 000-0000" />
+            </div>
+
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" />
+            </div>
+
+            <div class="form-row">
+              <label for="case-type">Case Type</label>
+              <select id="case-type" name="case-type">
+                <option>Auto Accident</option>
+                <option>Truck Accident</option>
+                <option>Premises Liability</option>
+                <option>Workplace Injury</option>
+                <option>Wrongful Death</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <label for="message">Brief Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Briefly tell us what happened."></textarea>
+            </div>
+
+            <button type="submit" class="contact-submit">Submit Request</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-info-section">
+      <div class="contact-info-inner">
+        <article class="contact-info-card">
+          <span>01</span>
+          <h3>Call The Firm</h3>
+          <p>Speak with LeUnes Law Firm about your situation and what options may be available.</p>
+          <a href="tel:+10000000000">(000) 000-0000</a>
+        </article>
+
+        <article class="contact-info-card">
+          <span>02</span>
+          <h3>Send A Message</h3>
+          <p>Share your information and receive a follow-up about the next step in the process.</p>
+          <a href="mailto:info@leuneslaw.com">info@leuneslaw.com</a>
+        </article>
+
+        <article class="contact-info-card">
+          <span>03</span>
+          <h3>Serving Texas</h3>
+          <p>Based in Cypress and representing injured clients throughout the state.</p>
+          <a href="about.html">Meet Christopher</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact-process-section">
+      <div class="contact-process-inner">
+        <div class="resource-heading">
+          <p class="section-eyebrow">What Happens Next</p>
+          <h2>A Straightforward First Step</h2>
+        </div>
+
+        <div class="contact-process-grid">
+          <div>
+            <h3>Initial Conversation</h3>
+            <p>Discuss what happened, your injuries, and the questions you need answered.</p>
+          </div>
+
+          <div>
+            <h3>Case Review</h3>
+            <p>The firm reviews the available facts and explains your possible legal options.</p>
+          </div>
+
+          <div>
+            <h3>Clear Guidance</h3>
+            <p>You receive practical direction without pressure or confusion.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="assets/leunes-logo.png" alt="LeUnes Law Firm Logo" class="footer-logo" />
+        <p>LeUnes Law Firm provides experienced personal injury representation for clients across Texas.</p>
+        <a href="contact.html" class="footer-cta">Free Consultation</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Navigation</h3>
+        <a href="homepage.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="case-results.html">Case Results</a>
+        <a href="practice-areas.html">Practice Areas</a>
+        <a href="recources.html">Resources</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Practice Areas</h3>
+        <a href="practice-areas.html">Auto Accidents</a>
+        <a href="practice-areas.html">Truck Accidents</a>
+        <a href="practice-areas.html">Premises Liability</a>
+        <a href="practice-areas.html">Workplace Injuries</a>
+        <a href="practice-areas.html">Wrongful Death</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Contact</h3>
+        <p>Cypress, Texas</p>
+        <a href="tel:+10000000000">(000) 000-0000</a>
+        <a href="mailto:info@leuneslaw.com">info@leuneslaw.com</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 LeUnes Law Firm. All Rights Reserved.</p>
+      <p>Prior results do not guarantee a similar outcome. This website is for informational purposes only.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
