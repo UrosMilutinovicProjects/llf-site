@@ -3394,3 +3394,413 @@ span {
   display: block;
 }
   
+
+/* =========================================================
+   Final Consistency Pass — Interior Pages, Practice Areas,
+   Resource Links, Contact Form, Testimonials
+========================================================= */
+
+.interior-hero-section {
+  position: relative;
+  background: var(--cream);
+  overflow: visible;
+  z-index: 2;
+}
+
+.interior-hero-inner {
+  max-width: 1512px;
+  min-height: 560px;
+  margin: 0 auto;
+  padding: 72px 96px 0;
+  position: relative;
+  overflow: visible;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 390px;
+  align-items: end;
+  gap: 72px;
+}
+
+.interior-hero-text {
+  align-self: start;
+  max-width: 640px;
+  padding-top: 18px;
+}
+
+.interior-hero-text h1 {
+  font-size: 48px;
+  line-height: 1.16;
+  letter-spacing: -0.02em;
+  margin-bottom: 22px;
+}
+
+.interior-hero-text > p:not(.page-label) {
+  max-width: 580px;
+  font-size: 17px;
+  line-height: 1.65;
+  margin-bottom: 34px;
+}
+
+.interior-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.interior-hero-image {
+  height: 450px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.interior-hero-image img {
+  width: 320px;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: bottom center;
+}
+
+.interior-stat-bar {
+  position: absolute;
+  left: 50%;
+  bottom: -56px;
+  transform: translateX(-50%);
+  width: min(1180px, calc(100% - 192px));
+  min-height: 112px;
+  background: var(--gold);
+  color: var(--navy);
+  border-radius: 10px;
+  border: 1px solid rgba(31, 61, 99, 0.32);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: stretch;
+  overflow: hidden;
+  box-shadow: 0 18px 36px rgba(31, 61, 99, 0.16);
+  z-index: 50;
+}
+
+.interior-stat {
+  min-height: 112px;
+  padding: 24px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-right: 1px solid rgba(31, 61, 99, 0.24);
+}
+
+.interior-stat:last-child {
+  border-right: none;
+}
+
+.interior-stat h3 {
+  font-size: 26px;
+  line-height: 1.08;
+  margin-bottom: 8px;
+}
+
+.interior-stat p {
+  font-size: 12px;
+  line-height: 1.35;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* Give the section after an interior hero room for the gold overlap. */
+.about-story-section,
+.case-results-list-section,
+.pi-categories-section,
+.resource-feature-section,
+.contact-form-section {
+  padding-top: 152px;
+}
+
+/* Practice areas: replace hidden accordions with visible, linkable content cards. */
+.pi-categories-section {
+  background: #fffdf8;
+  padding-bottom: 112px;
+}
+
+.pi-practice-list {
+  display: grid;
+  gap: 32px;
+}
+
+.pi-practice-card {
+  scroll-margin-top: 110px;
+  display: grid;
+  grid-template-columns: 0.82fr 1.18fr;
+  gap: 0;
+  overflow: hidden;
+  background: var(--cream);
+  border: 1px solid rgba(31, 61, 99, 0.16);
+  border-radius: 18px;
+  box-shadow: 0 12px 28px rgba(31, 61, 99, 0.08);
+}
+
+.pi-practice-card:nth-child(even) .pi-practice-card-media {
+  order: 2;
+}
+
+.pi-practice-card-media {
+  min-height: 410px;
+  background: rgba(31, 61, 99, 0.08);
+}
+
+.pi-practice-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pi-practice-card-copy {
+  padding: 46px 44px;
+}
+
+.pi-practice-card-heading {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.pi-practice-card-heading h3 {
+  font-size: 34px;
+  line-height: 1.15;
+}
+
+.pi-practice-card-copy > p {
+  font-size: 16px;
+  line-height: 1.72;
+  margin-bottom: 30px;
+}
+
+.pi-practice-card .pi-detail-grid {
+  margin-bottom: 30px;
+}
+
+.pi-editorial-section {
+  scroll-margin-top: 100px;
+}
+
+/* Resources: make cards act like real topic links. */
+.resource-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.resource-card a {
+  margin-top: auto;
+}
+
+.resource-card a:hover,
+.text-link:hover {
+  text-decoration: underline;
+}
+
+/* Contact: form starts in its own section so the hero matches the rest of the site. */
+.contact-form-section {
+  background: #fffdf8;
+  padding-left: 72px;
+  padding-right: 72px;
+  padding-bottom: 112px;
+}
+
+.contact-form-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.78fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.contact-form-copy {
+  position: sticky;
+  top: 96px;
+}
+
+.contact-form-copy h2 {
+  font-size: 44px;
+  line-height: 1.14;
+  margin-bottom: 22px;
+}
+
+.contact-form-copy p:not(.section-eyebrow) {
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 420px;
+}
+
+.contact-form-inner .contact-card {
+  width: 100%;
+}
+
+/* Testimonials: equal-size cards with smoother transitions and text clipping. */
+.testimonial-track {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.testimonial-card,
+.side-card,
+.featured-card {
+  min-height: 292px;
+  height: 292px;
+  padding: 42px 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 1;
+  overflow: hidden;
+  transition: opacity 0.24s ease, transform 0.24s ease, box-shadow 0.24s ease;
+}
+
+.testimonial-card.is-changing {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+.testimonial-card p:last-child,
+.featured-card p:last-child {
+  max-width: 440px;
+  font-size: 14px;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.testimonial-stars {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1100px) {
+  .interior-hero-inner {
+    grid-template-columns: 1fr 300px;
+    padding: 64px 48px 0;
+    gap: 44px;
+  }
+
+  .interior-stat-bar {
+    width: min(1000px, calc(100% - 96px));
+  }
+
+  .pi-practice-card,
+  .contact-form-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .pi-practice-card:nth-child(even) .pi-practice-card-media {
+    order: 0;
+  }
+
+  .contact-form-copy {
+    position: static;
+  }
+}
+
+@media (max-width: 860px) {
+  .interior-hero-inner {
+    min-height: auto;
+    padding: 56px 24px 0;
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .interior-hero-text {
+    padding-top: 0;
+  }
+
+  .interior-hero-text h1 {
+    font-size: 40px;
+  }
+
+  .interior-hero-image {
+    height: 340px;
+  }
+
+  .interior-hero-image img {
+    width: 260px;
+  }
+
+  .interior-stat-bar {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    transform: none;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 0;
+  }
+
+  .about-story-section,
+  .case-results-list-section,
+  .pi-categories-section,
+  .resource-feature-section,
+  .contact-form-section {
+    padding-top: 72px;
+  }
+
+  .pi-categories-section,
+  .contact-form-section {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .pi-practice-card-copy {
+    padding: 34px 26px;
+  }
+
+  .pi-practice-card-media {
+    min-height: 260px;
+  }
+
+  .pi-practice-card-heading h3 {
+    font-size: 28px;
+  }
+
+  .testimonial-track {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-card,
+  .side-card,
+  .featured-card {
+    height: auto;
+    min-height: 260px;
+  }
+}
+
+@media (max-width: 520px) {
+  .interior-stat-bar {
+    grid-template-columns: 1fr;
+  }
+
+  .interior-stat {
+    border-right: none;
+    border-bottom: 1px solid rgba(31, 61, 99, 0.22);
+  }
+
+  .interior-stat:last-child {
+    border-bottom: none;
+  }
+}
+
+/* Tighten page labels inside shared interior heroes after legacy page rules. */
+.interior-hero-text .page-label,
+.about-hero-text.interior-hero-text .page-label,
+.case-hero-text.interior-hero-text .page-label {
+  color: var(--rust);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: 0 0 18px;
+  line-height: 1.2;
+}

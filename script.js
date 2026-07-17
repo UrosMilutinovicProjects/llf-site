@@ -88,7 +88,27 @@ function updateTestimonials(startIndex = 0) {
 }
 
 let testimonialIndex = 0;
+let testimonialTimer = null;
 const testimonialCards = document.querySelectorAll(".testimonial-card");
+
+function moveTestimonials(nextIndex) {
+  if (!testimonialCards.length) return;
+
+  testimonialCards.forEach((card) => card.classList.add("is-changing"));
+
+  window.setTimeout(() => {
+    testimonialIndex = (nextIndex + leunesReviews.length) % leunesReviews.length;
+    updateTestimonials(testimonialIndex);
+    testimonialCards.forEach((card) => card.classList.remove("is-changing"));
+  }, 220);
+}
+
+function resetTestimonialTimer() {
+  if (testimonialTimer) window.clearInterval(testimonialTimer);
+  testimonialTimer = window.setInterval(() => {
+    moveTestimonials(testimonialIndex + 1);
+  }, 5200);
+}
 
 if (testimonialCards.length) {
   updateTestimonials(testimonialIndex);
@@ -98,22 +118,19 @@ if (testimonialCards.length) {
 
   nextButtons.forEach((button) => {
     button.addEventListener("click", () => {
-      testimonialIndex = (testimonialIndex + 1) % leunesReviews.length;
-      updateTestimonials(testimonialIndex);
+      moveTestimonials(testimonialIndex + 1);
+      resetTestimonialTimer();
     });
   });
 
   prevButtons.forEach((button) => {
     button.addEventListener("click", () => {
-      testimonialIndex = (testimonialIndex - 1 + leunesReviews.length) % leunesReviews.length;
-      updateTestimonials(testimonialIndex);
+      moveTestimonials(testimonialIndex - 1);
+      resetTestimonialTimer();
     });
   });
 
-  setInterval(() => {
-    testimonialIndex = (testimonialIndex + 1) % leunesReviews.length;
-    updateTestimonials(testimonialIndex);
-  }, 4500);
+  resetTestimonialTimer();
 }
 
 const caseMoreButton = document.getElementById("caseMoreButton");
