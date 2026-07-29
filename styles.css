@@ -1375,6 +1375,26 @@ span {
     min-height: 232px;
   }
 
+  .credibility-card.image-card {
+    display: none;
+  }
+
+  .hero-circle {
+    display: none;
+  }
+
+  .process-wave {
+    display: none;
+  }
+
+  .meet-preview-image {
+    display: none;
+  }
+
+  .side-card {
+    display: none;
+  }
+
   .why-inner,
   .areas-inner {
     padding: 72px 24px;
@@ -3032,6 +3052,8 @@ span {
   border: 1px solid rgba(31, 61, 99, 0.18);
   border-radius: 16px;
   background: #fbf8f1;
+  display: flex;
+  flex-direction: column;
 }
 
 .resource-card h3 {
@@ -3043,7 +3065,8 @@ span {
 .resource-card p {
   font-size: 15px;
   line-height: 1.6;
-  margin-bottom: 28px;
+  margin-bottom: 0;
+  flex-grow: 1;
 }
 
 .resource-learn-more {
@@ -3773,15 +3796,6 @@ span {
 }
 
 /* Resources: make cards act like real topic links. */
-.resource-card {
-  display: flex;
-  flex-direction: column;
-}
-
-.resource-card p {
-  flex-grow: 1;
-}
-
 .resource-card a {
   margin-top: auto;
 }
