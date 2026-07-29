@@ -108,37 +108,37 @@
           <article class="resource-card">
             <h3 data-en="After A Car Accident" data-es="Después De Un Accidente Automovilístico">After A Car Accident</h3>
             <p data-en="Get medical attention, document the scene, avoid quick settlements, and keep records of treatment and expenses." data-es="Reciba atención médica, documente la escena, evite acuerdos rápidos y guarde registros de tratamiento y gastos.">Get medical attention, document the scene, avoid quick settlements, and keep records of treatment and expenses.</p>
-            <a href="practice-areas.html#auto-accidents" data-en="Learn More →" data-es="Más Información →">Learn More →</a>
+            <button class="resource-learn-more" onclick="openBlogModal('car-accident'); return false;" data-en="Learn More →" data-es="Más Información →">Learn More →</button>
           </article>
 
           <article class="resource-card">
             <h3 data-en="Dealing With Insurance" data-es="Cómo Tratar Con El Seguro">Dealing With Insurance</h3>
             <p data-en="Insurance companies may request recorded statements or use early conversations to limit the value of your claim." data-es="Las aseguradoras pueden solicitar declaraciones grabadas o usar conversaciones iniciales para limitar el valor de su reclamo.">Insurance companies may request recorded statements or use early conversations to limit the value of your claim.</p>
-            <a href="practice-areas.html#former-defense-perspective" data-en="Learn More →" data-es="Más Información →">Learn More →</a>
+            <button class="resource-learn-more" onclick="openBlogModal('insurance'); return false;" data-en="Learn More →" data-es="Más Información →">Learn More →</button>
           </article>
 
           <article class="resource-card">
             <h3 data-en="Truck Accident Claims" data-es="Reclamos De Accidentes De Camiones">Truck Accident Claims</h3>
             <p data-en="Commercial vehicle cases may involve company records, driver logs, maintenance history, and multiple responsible parties." data-es="Los casos de vehículos comerciales pueden involucrar registros de la empresa, bitácoras del conductor, historial de mantenimiento y múltiples partes responsables.">Commercial vehicle cases may involve company records, driver logs, maintenance history, and multiple responsible parties.</p>
-            <a href="practice-areas.html#truck-accidents" data-en="Learn More →" data-es="Más Información →">Learn More →</a>
+            <button class="resource-learn-more" onclick="openBlogModal('truck-accident'); return false;" data-en="Learn More →" data-es="Más Información →">Learn More →</button>
           </article>
 
           <article class="resource-card">
             <h3 data-en="Premises Liability" data-es="Responsabilidad De Propiedad">Premises Liability</h3>
             <p data-en="Unsafe property conditions, poor maintenance, lighting issues, and hazard reports can become important evidence." data-es="Las condiciones inseguras de la propiedad, el mal mantenimiento, los problemas de iluminación y los reportes de peligro pueden convertirse en evidencia importante.">Unsafe property conditions, poor maintenance, lighting issues, and hazard reports can become important evidence.</p>
-            <a href="practice-areas.html#premises-liability" data-en="Learn More →" data-es="Más Información →">Learn More →</a>
+            <button class="resource-learn-more" onclick="openBlogModal('premises-liability'); return false;" data-en="Learn More →" data-es="Más Información →">Learn More →</button>
           </article>
 
           <article class="resource-card">
             <h3 data-en="Workplace Injuries" data-es="Lesiones Laborales">Workplace Injuries</h3>
             <p data-en="Job site and industrial injury cases may involve contractors, equipment companies, property owners, or third parties." data-es="Los casos de lesiones en sitios de trabajo e industriales pueden involucrar contratistas, empresas de equipos, propietarios o terceros.">Job site and industrial injury cases may involve contractors, equipment companies, property owners, or third parties.</p>
-            <a href="practice-areas.html#workplace-injuries" data-en="Learn More →" data-es="Más Información →">Learn More →</a>
+            <button class="resource-learn-more" onclick="openBlogModal('workplace-injuries'); return false;" data-en="Learn More →" data-es="Más Información →">Learn More →</button>
           </article>
 
           <article class="resource-card">
             <h3 data-en="Wrongful Death" data-es="Muerte Injusta">Wrongful Death</h3>
             <p data-en="Families deserve clear guidance after preventable loss, including help understanding available claims and next steps." data-es="Las familias merecen orientación clara después de una pérdida evitable, incluyendo ayuda para entender los reclamos disponibles y los próximos pasos.">Families deserve clear guidance after preventable loss, including help understanding available claims and next steps.</p>
-            <a href="practice-areas.html#wrongful-death" data-en="Learn More →" data-es="Más Información →">Learn More →</a>
+            <button class="resource-learn-more" onclick="openBlogModal('wrongful-death'); return false;" data-en="Learn More →" data-es="Más Información →">Learn More →</button>
           </article>
         </div>
       </div>
@@ -167,6 +167,16 @@
         </div>
       </div>
     </section>
+
+    <!-- Blog Modal -->
+    <div class="blog-modal" id="blogModal">
+      <div class="blog-modal-content">
+        <button class="blog-modal-close" id="blogModalClose" aria-label="Close blog">×</button>
+        <div class="blog-modal-inner" id="blogModalInner">
+          <!-- Content will be inserted here by JavaScript -->
+        </div>
+      </div>
+    </div>
   </main>
 
     <footer class="site-footer">
