@@ -4,21 +4,30 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <meta name="description" content="LeUnes Law Firm provides experienced personal injury representation for injured Texans. Former defense attorney Christopher LeUnes handles auto accidents, truck accidents, premises liability, and workplace injuries. Free consultation — no fee unless we win." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="LeUnes Law Firm" />
+  <meta property="og:title" content="LeUnes Law Firm | Trusted Legal Representation" />
+  <meta property="og:description" content="LeUnes Law Firm provides experienced personal injury representation for injured Texans. Former defense attorney Christopher LeUnes handles auto accidents, truck accidents, premises liability, and workplace injuries. Free consultation — no fee unless we win." />
+  <meta property="og:image" content="assets/LeUnes Head Shot.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
   <title>LeUnes Law Firm | Trusted Legal Representation</title>
 
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=2" />
 </head>
 
 <body>
   <!-- Header -->
   <header class="site-header">
     <div class="header-inner">
-      <a href="homepage.html" class="logo-link" aria-label="LeUnes Law Firm Home">
+      <a href="index.html" class="logo-link" aria-label="LeUnes Law Firm Home">
         <img src="assets/leunes-logo.png" alt="LeUnes Law Firm Logo" class="site-logo" />
       </a>
 
       <nav class="desktop-nav" aria-label="Main navigation">
-        <a href="homepage.html" class="nav-link active" data-en="Home" data-es="Inicio">Home</a>
+        <a href="index.html" class="nav-link active" data-en="Home" data-es="Inicio">Home</a>
         <a href="about.html" class="nav-link" data-en="About Us" data-es="Sobre Nosotros">About Us</a>
         <a href="case-results.html" class="nav-link" data-en="Case Results" data-es="Resultados">Case Results</a>
         <a href="practice-areas.html" class="nav-link" data-en="Practice Areas" data-es="Áreas De Práctica">Practice Areas</a>
@@ -33,7 +42,7 @@
         <a href="contact.html" class="contact-button" data-en="Contact" data-es="Contacto">Contact</a>
       </div>
 
-      <button class="mobile-menu-button" id="mobileMenuButton" aria-label="Open menu" type="button">
+      <button class="mobile-menu-button" id="mobileMenuButton" aria-label="Open menu" aria-expanded="false" type="button">
         <span></span>
         <span></span>
         <span></span>
@@ -41,7 +50,7 @@
     </div>
 
     <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
-      <a href="homepage.html" class="mobile-nav-link active" data-en="Home" data-es="Inicio">Home</a>
+      <a href="index.html" class="mobile-nav-link active" data-en="Home" data-es="Inicio">Home</a>
       <a href="about.html" class="mobile-nav-link" data-en="About Us" data-es="Sobre Nosotros">About Us</a>
       <a href="case-results.html" class="mobile-nav-link" data-en="Case Results" data-es="Resultados">Case Results</a>
       <a href="practice-areas.html" class="mobile-nav-link" data-en="Practice Areas" data-es="Áreas De Práctica">Practice Areas</a>
@@ -454,50 +463,52 @@
   </main>
 
   <!-- Footer -->
-  <footer class="site-footer">
+    <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-brand">
         <img src="assets/leunes-logo.png" alt="LeUnes Law Firm Logo" class="footer-logo" />
 
-        <p>
+        <p data-en="LeUnes Law Firm provides experienced personal injury representation for clients across Texas." data-es="LeUnes Law Firm ofrece representación experimentada en casos de lesiones personales para clientes en todo Texas.">
           LeUnes Law Firm provides experienced personal injury representation for clients across Texas.
         </p>
 
-        <a href="contact.html" class="footer-cta">Free Consultation</a>
+        <a href="contact.html" class="footer-cta" data-en="Free Consultation" data-es="Consulta Gratis">Free Consultation</a>
       </div>
 
       <div class="footer-column">
-        <h3>Navigation</h3>
-        <a href="homepage.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="case-results.html">Case Results</a>
-        <a href="practice-areas.html">Practice Areas</a>
-        <a href="recources.html">Resources</a><a href="contact.html">Contact</a>
+        <h3 data-en="Navigation" data-es="Navegación">Navigation</h3>
+        <a href="index.html" data-en="Home" data-es="Inicio">Home</a>
+        <a href="about.html" data-en="About" data-es="Acerca De">About</a>
+        <a href="case-results.html" data-en="Case Results" data-es="Resultados">Case Results</a>
+        <a href="practice-areas.html" data-en="Practice Areas" data-es="Áreas De Práctica">Practice Areas</a>
+        <a href="recources.html" data-en="Resources" data-es="Recursos">Resources</a><a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a>
       </div>
 
       <div class="footer-column">
-        <h3>Practice Areas</h3>
-        <a href="practice-areas.html#auto-accidents">Auto Accidents</a>
-        <a href="practice-areas.html#truck-accidents">Truck Accidents</a>
-        <a href="practice-areas.html#premises-liability">Premises Liability</a>
-        <a href="practice-areas.html#workplace-injuries">Workplace Injuries</a>
-        <a href="practice-areas.html#wrongful-death">Wrongful Death</a>
+        <h3 data-en="Practice Areas" data-es="Áreas De Práctica">Practice Areas</h3>
+        <a href="practice-areas.html#auto-accidents" data-en="Auto Accidents" data-es="Accidentes Automovilísticos">Auto Accidents</a>
+        <a href="practice-areas.html#truck-accidents" data-en="Truck Accidents" data-es="Accidentes De Camiones">Truck Accidents</a>
+        <a href="practice-areas.html#premises-liability" data-en="Premises Liability" data-es="Responsabilidad De Propiedad">Premises Liability</a>
+        <a href="practice-areas.html#workplace-injuries" data-en="Workplace Injuries" data-es="Lesiones Laborales">Workplace Injuries</a>
+        <a href="practice-areas.html#wrongful-death" data-en="Wrongful Death" data-es="Muerte Injusta">Wrongful Death</a>
+        <a href="practice-areas.html#real-estate" data-en="Real Estate" data-es="Bienes Raíces">Real Estate</a>
+        <a href="practice-areas.html#estate-planning" data-en="Estate Planning" data-es="Planificación Patrimonial">Estate Planning</a>
       </div>
 
       <div class="footer-column">
-        <h3>Contact</h3>
-        <p>Cypress, Texas</p>
-        <a href="tel:+10000000000">(000) 000-0000</a>
+        <h3 data-en="Contact" data-es="Contacto">Contact</h3>
+        <p data-en="Cypress, Texas" data-es="Cypress, Texas">Cypress, Texas</p>
+        <a href="tel:+18326202874">(832) 620-2874</a>
         <a href="mailto:info@leuneslaw.com">info@leuneslaw.com</a>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <p>© 2026 LeUnes Law Firm. All Rights Reserved.</p>
-      <p>Prior results do not guarantee a similar outcome. This website is for informational purposes only.</p>
+      <p data-en="© 2026 LeUnes Law Firm. All Rights Reserved." data-es="© 2026 LeUnes Law Firm. Todos Los Derechos Reservados.">© 2026 LeUnes Law Firm. All Rights Reserved.</p>
+      <p data-en="Prior results do not guarantee a similar outcome. This website is for informational purposes only." data-es="Los resultados anteriores no garantizan un resultado similar. Este sitio web es solo para fines informativos.">Prior results do not guarantee a similar outcome. This website is for informational purposes only.</p>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=2"></script>
 </body>
 </html>

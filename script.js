@@ -2,27 +2,53 @@ const languageToggle = document.getElementById("languageToggle");
 const mobileMenuButton = document.getElementById("mobileMenuButton");
 const mobileNav = document.getElementById("mobileNav");
 
-let currentLanguage = "en";
+let currentLanguage = window.localStorage.getItem("leunesLanguage") || "en";
+
+function applyLanguage(language) {
+  currentLanguage = language;
+  document.documentElement.lang = currentLanguage;
+
+  const translatableElements = document.querySelectorAll("[data-en][data-es]");
+
+  translatableElements.forEach((element) => {
+    element.textContent = element.getAttribute(`data-${currentLanguage}`);
+  });
+
+  const translatablePlaceholders = document.querySelectorAll("[data-en-placeholder][data-es-placeholder]");
+
+  translatablePlaceholders.forEach((element) => {
+    element.placeholder = element.getAttribute(`data-${currentLanguage}-placeholder`);
+  });
+
+  if (languageToggle) {
+    languageToggle.textContent = currentLanguage === "en" ? "Español" : "English";
+  }
+}
+
+applyLanguage(currentLanguage);
 
 if (languageToggle) {
   languageToggle.addEventListener("click", () => {
-    currentLanguage = currentLanguage === "en" ? "es" : "en";
+    window.localStorage.setItem("leunesLanguage", currentLanguage === "en" ? "es" : "en");
+    applyLanguage(currentLanguage === "en" ? "es" : "en");
 
-    document.documentElement.lang = currentLanguage;
+    if (typeof updateTestimonials === "function" && typeof testimonialIndex !== "undefined") {
+      updateTestimonials(testimonialIndex);
+    }
 
-    const translatableElements = document.querySelectorAll("[data-en][data-es]");
-
-    translatableElements.forEach((element) => {
-      element.textContent = element.getAttribute(`data-${currentLanguage}`);
-    });
-
-    languageToggle.textContent = currentLanguage === "en" ? "Español" : "English";
+    if (caseMoreButton && extraCaseResults) {
+      caseMoreButton.textContent = extraCaseResults.hasAttribute("hidden")
+        ? (currentLanguage === "en" ? "See More ⌄" : "Ver Más ⌄")
+        : (currentLanguage === "en" ? "Show Less ⌃" : "Ver Menos ⌃");
+    }
   });
 }
 
 if (mobileMenuButton && mobileNav) {
   mobileMenuButton.addEventListener("click", () => {
-    mobileNav.classList.toggle("open");
+    const isOpen = mobileNav.classList.toggle("open");
+    mobileMenuButton.setAttribute("aria-expanded", String(isOpen));
+    mobileMenuButton.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
   });
 }
 
@@ -47,27 +73,33 @@ practiceAccordionItems.forEach((item) => {
 const leunesReviews = [
   {
     name: "Sarah M., Houston",
-    text: "Christopher took the time to explain every step of the process and always made himself available when I had questions. I never felt like just another case."
+    text: "Christopher took the time to explain every step of the process and always made himself available when I had questions. I never felt like just another case.",
+    textEs: "Christopher se tomó el tiempo de explicar cada paso del proceso y siempre estuvo disponible cuando tuve preguntas. Nunca sentí que era solo un caso más."
   },
   {
     name: "Michael R., Cypress",
-    text: "The communication was clear from the beginning. I always knew what was happening and what the next step would be."
+    text: "The communication was clear from the beginning. I always knew what was happening and what the next step would be.",
+    textEs: "La comunicación fue clara desde el principio. Siempre supe qué estaba pasando y cuál sería el siguiente paso."
   },
   {
     name: "Daniel P., Houston",
-    text: "LeUnes Law Firm handled the insurance company and helped me understand the process after my accident."
+    text: "LeUnes Law Firm handled the insurance company and helped me understand the process after my accident.",
+    textEs: "LeUnes Law Firm se encargó de la aseguradora y me ayudó a entender el proceso después de mi accidente."
   },
   {
     name: "Vanessa G., Katy",
-    text: "I appreciated the personal attention and honest guidance. The team was responsive and professional throughout my case."
+    text: "I appreciated the personal attention and honest guidance. The team was responsive and professional throughout my case.",
+    textEs: "Aprecié la atención personal y la orientación honesta. El equipo fue receptivo y profesional durante todo mi caso."
   },
   {
     name: "Robert T., Texas",
-    text: "Christopher gave straightforward advice and helped me feel prepared during a stressful situation."
+    text: "Christopher gave straightforward advice and helped me feel prepared during a stressful situation.",
+    textEs: "Christopher me dio consejos claros y me ayudó a sentirme preparado durante una situación estresante."
   },
   {
     name: "Amanda L., Houston",
-    text: "The firm was organized, patient, and easy to reach whenever I had questions about my injury claim."
+    text: "The firm was organized, patient, and easy to reach whenever I had questions about my injury claim.",
+    textEs: "La firma fue organizada, paciente y fácil de contactar cada vez que tuve preguntas sobre mi reclamo por lesiones."
   }
 ];
 
@@ -83,7 +115,7 @@ function updateTestimonials(startIndex = 0) {
 
     if (nameEl) nameEl.textContent = review.name;
     if (starsEl) starsEl.textContent = "★★★★★";
-    if (textEl) textEl.textContent = review.text;
+    if (textEl) textEl.textContent = currentLanguage === "es" ? review.textEs : review.text;
   });
 }
 
@@ -142,10 +174,10 @@ if (caseMoreButton && extraCaseResults) {
 
     if (isHidden) {
       extraCaseResults.removeAttribute("hidden");
-      caseMoreButton.textContent = "Show Less ⌃";
+      caseMoreButton.textContent = currentLanguage === "en" ? "Show Less ⌃" : "Ver Menos ⌃";
     } else {
       extraCaseResults.setAttribute("hidden", "");
-      caseMoreButton.textContent = "See More ⌄";
+      caseMoreButton.textContent = currentLanguage === "en" ? "See More ⌄" : "Ver Más ⌄";
     }
   });
 }

@@ -4,21 +4,30 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <meta name="description" content="LeUnes Law Firm handles personal injury cases across Texas, including auto accidents, truck accidents, premises liability, workplace injuries, and wrongful death. Free consultation." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="LeUnes Law Firm" />
+  <meta property="og:title" content="Personal Injury Practice Areas | LeUnes Law Firm" />
+  <meta property="og:description" content="LeUnes Law Firm handles personal injury cases across Texas, including auto accidents, truck accidents, premises liability, workplace injuries, and wrongful death. Free consultation." />
+  <meta property="og:image" content="assets/LeUnes Head Shot.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
   <title>Personal Injury | LeUnes Law Firm</title>
 
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=2" />
 </head>
 
 <body>
   <!-- Header -->
   <header class="site-header">
     <div class="header-inner">
-      <a href="homepage.html" class="logo-link" aria-label="LeUnes Law Firm Home">
+      <a href="index.html" class="logo-link" aria-label="LeUnes Law Firm Home">
         <img src="assets/leunes-logo.png" alt="LeUnes Law Firm Logo" class="site-logo" />
       </a>
 
       <nav class="desktop-nav" aria-label="Main navigation">
-        <a href="homepage.html" class="nav-link" data-en="Home" data-es="Inicio">Home</a>
+        <a href="index.html" class="nav-link" data-en="Home" data-es="Inicio">Home</a>
         <a href="about.html" class="nav-link" data-en="About" data-es="Acerca De">About</a>
         <a href="case-results.html" class="nav-link" data-en="Case Results" data-es="Resultados">Case Results</a>
         <a href="practice-areas.html" class="nav-link active" data-en="Practice Areas" data-es="Áreas De Práctica">Practice Areas</a>
@@ -33,7 +42,7 @@
         <a href="contact.html" class="contact-button" data-en="Contact" data-es="Contacto">Contact</a>
       </div>
 
-      <button class="mobile-menu-button" id="mobileMenuButton" aria-label="Open menu" type="button">
+      <button class="mobile-menu-button" id="mobileMenuButton" aria-label="Open menu" aria-expanded="false" type="button">
         <span></span>
         <span></span>
         <span></span>
@@ -41,7 +50,7 @@
     </div>
 
     <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
-      <a href="homepage.html" class="mobile-nav-link" data-en="Home" data-es="Inicio">Home</a>
+      <a href="index.html" class="mobile-nav-link" data-en="Home" data-es="Inicio">Home</a>
       <a href="about.html" class="mobile-nav-link" data-en="About" data-es="Acerca De">About</a>
       <a href="case-results.html" class="mobile-nav-link" data-en="Case Results" data-es="Resultados">Case Results</a>
       <a href="practice-areas.html" class="mobile-nav-link active" data-en="Practice Areas" data-es="Áreas De Práctica">Practice Areas</a>
@@ -55,11 +64,11 @@
     <section class="interior-hero-section">
       <div class="interior-hero-inner">
         <div class="interior-hero-text">
-          <p class="page-label">Practice Areas</p>
-          <h1>Personal Injury Representation Across Texas.</h1>
-          <p>If you were injured because of someone else’s negligence, LeUnes Law Firm provides experienced guidance, direct communication, and attorney-led representation from consultation through resolution.</p>
+          <p class="page-label" data-en="Practice Areas" data-es="Áreas De Práctica">Practice Areas</p>
+          <h1 data-en="Personal Injury Representation Across Texas." data-es="Representación En Lesiones Personales En Todo Texas.">Personal Injury Representation Across Texas.</h1>
+          <p data-en="If you were injured because of someone else’s negligence, LeUnes Law Firm provides experienced guidance, direct communication, and attorney-led representation from consultation through resolution." data-es="Si resultó lesionado por la negligencia de otra persona, LeUnes Law Firm ofrece orientación experimentada, comunicación directa y representación dirigida por el abogado desde la consulta hasta la resolución.">If you were injured because of someone else’s negligence, LeUnes Law Firm provides experienced guidance, direct communication, and attorney-led representation from consultation through resolution.</p>
           <div class="interior-hero-actions">
-            <a href="contact.html" class="hero-button">Schedule Consultation</a>
+            <a href="contact.html" class="hero-button" data-en="Schedule Consultation" data-es="Programar Consulta">Schedule Consultation</a>
           </div>
         </div>
 
@@ -68,10 +77,10 @@
         </div>
 
         <div class="interior-stat-bar">
-          <div class="interior-stat"><h3>16+</h3><p>Years of Experience</p></div>
-          <div class="interior-stat"><h3>Since 2010</h3><p>Serving Texans</p></div>
-          <div class="interior-stat"><h3>Former</h3><p>Defense Attorney</p></div>
-          <div class="interior-stat"><h3>Statewide</h3><p>Texas Representation</p></div>
+          <div class="interior-stat"><h3>16+</h3><p data-en="Years of Experience" data-es="Años de Experiencia">Years of Experience</p></div>
+          <div class="interior-stat"><h3 data-en="Since 2010" data-es="Desde 2010">Since 2010</h3><p data-en="Serving Texans" data-es="Sirviendo A Texanos">Serving Texans</p></div>
+          <div class="interior-stat"><h3 data-en="Former" data-es="Ex">Former</h3><p data-en="Defense Attorney" data-es="Abogado de Defensa">Defense Attorney</p></div>
+          <div class="interior-stat"><h3 data-en="Statewide" data-es="En Todo Texas">Statewide</h3><p data-en="Texas Representation" data-es="Representación en Texas">Texas Representation</p></div>
         </div>
       </div>
     </section>
@@ -93,13 +102,13 @@
               <img src="assets/Attorney meeting with clients.png" alt="Attorney meeting with clients" />
             </div>
             <div class="pi-practice-card-copy">
-              <div class="pi-practice-card-heading"><span class="pi-category-icon">01</span><h3>Auto Accidents</h3></div>
-              <p>After a serious crash, insurance companies may move quickly to protect their own interests. LeUnes Law Firm helps injured drivers, passengers, and pedestrians understand their options and pursue compensation for the harm they have suffered.</p>
+              <div class="pi-practice-card-heading"><span class="pi-category-icon">01</span><h3 data-en="Auto Accidents" data-es="Accidentes Automovilísticos">Auto Accidents</h3></div>
+              <p data-en="After a serious crash, insurance companies may move quickly to protect their own interests. LeUnes Law Firm helps injured drivers, passengers, and pedestrians understand their options and pursue compensation for the harm they have suffered." data-es="Después de un choque grave, las aseguradoras pueden actuar rápido para proteger sus propios intereses. LeUnes Law Firm ayuda a conductores, pasajeros y peatones lesionados a entender sus opciones y buscar compensación por el daño sufrido.">After a serious crash, insurance companies may move quickly to protect their own interests. LeUnes Law Firm helps injured drivers, passengers, and pedestrians understand their options and pursue compensation for the harm they have suffered.</p>
               <div class="pi-detail-grid">
-                <div><h4>Common Cases</h4><ul><li>Rear-end collisions</li><li>Intersection crashes</li><li>Distracted driving</li><li>Uninsured motorists</li></ul></div>
-                <div><h4>Potential Recovery</h4><ul><li>Medical expenses</li><li>Lost income</li><li>Pain and suffering</li><li>Property damage</li></ul></div>
+                <div><h4 data-en="Common Cases" data-es="Casos Comunes">Common Cases</h4><ul><li data-en="Rear-end collisions" data-es="Colisiones traseras">Rear-end collisions</li><li data-en="Intersection crashes" data-es="Choques en intersecciones">Intersection crashes</li><li data-en="Distracted driving" data-es="Conducción distraída">Distracted driving</li><li data-en="Uninsured motorists" data-es="Conductores sin seguro">Uninsured motorists</li></ul></div>
+                <div><h4 data-en="Potential Recovery" data-es="Posible Compensación">Potential Recovery</h4><ul><li data-en="Medical expenses" data-es="Gastos médicos">Medical expenses</li><li data-en="Lost income" data-es="Ingresos perdidos">Lost income</li><li data-en="Pain and suffering" data-es="Dolor y sufrimiento">Pain and suffering</li><li data-en="Property damage" data-es="Daños a la propiedad">Property damage</li></ul></div>
               </div>
-              <a href="contact.html" class="text-link">Free Consultation →</a>
+              <a href="contact.html" class="text-link" data-en="Free Consultation →" data-es="Consulta Gratis →">Free Consultation →</a>
             </div>
           </article>
 
@@ -108,13 +117,13 @@
               <img src="assets/Legal consultation in a conference room.png" alt="Legal consultation in a conference room" />
             </div>
             <div class="pi-practice-card-copy">
-              <div class="pi-practice-card-heading"><span class="pi-category-icon">02</span><h3>Truck Accidents</h3></div>
-              <p>Truck accident claims can involve commercial carriers, maintenance records, driver logs, contractors, and insurance companies. These cases often require fast evidence preservation and careful investigation.</p>
+              <div class="pi-practice-card-heading"><span class="pi-category-icon">02</span><h3 data-en="Truck Accidents" data-es="Accidentes De Camiones">Truck Accidents</h3></div>
+              <p data-en="Truck accident claims can involve commercial carriers, maintenance records, driver logs, contractors, and insurance companies. These cases often require fast evidence preservation and careful investigation." data-es="Los reclamos por accidentes de camiones pueden involucrar transportistas comerciales, registros de mantenimiento, bitácoras de conductores, contratistas y aseguradoras. Estos casos a menudo requieren preservación rápida de evidencia e investigación cuidadosa.">Truck accident claims can involve commercial carriers, maintenance records, driver logs, contractors, and insurance companies. These cases often require fast evidence preservation and careful investigation.</p>
               <div class="pi-detail-grid">
-                <div><h4>Common Cases</h4><ul><li>18-wheeler crashes</li><li>Commercial vehicle collisions</li><li>Driver fatigue</li><li>Unsafe loading</li></ul></div>
-                <div><h4>Key Evidence</h4><ul><li>Driver logs</li><li>Maintenance history</li><li>Company policies</li><li>Crash reports</li></ul></div>
+                <div><h4 data-en="Common Cases" data-es="Casos Comunes">Common Cases</h4><ul><li data-en="18-wheeler crashes" data-es="Choques de camiones de 18 ruedas">18-wheeler crashes</li><li data-en="Commercial vehicle collisions" data-es="Colisiones de vehículos comerciales">Commercial vehicle collisions</li><li data-en="Driver fatigue" data-es="Fatiga del conductor">Driver fatigue</li><li data-en="Unsafe loading" data-es="Carga insegura">Unsafe loading</li></ul></div>
+                <div><h4 data-en="Key Evidence" data-es="Evidencia Clave">Key Evidence</h4><ul><li data-en="Driver logs" data-es="Bitácoras del conductor">Driver logs</li><li data-en="Maintenance history" data-es="Historial de mantenimiento">Maintenance history</li><li data-en="Company policies" data-es="Políticas de la empresa">Company policies</li><li data-en="Crash reports" data-es="Reportes de accidentes">Crash reports</li></ul></div>
               </div>
-              <a href="contact.html" class="text-link">Free Consultation →</a>
+              <a href="contact.html" class="text-link" data-en="Free Consultation →" data-es="Consulta Gratis →">Free Consultation →</a>
             </div>
           </article>
 
@@ -123,13 +132,13 @@
               <img src="assets/Modern law office exterior.png" alt="Building exterior" />
             </div>
             <div class="pi-practice-card-copy">
-              <div class="pi-practice-card-heading"><span class="pi-category-icon">03</span><h3>Premises Liability</h3></div>
-              <p>Property owners may be responsible when unsafe conditions cause injuries. LeUnes Law Firm helps clients evaluate hazards, notice issues, maintenance failures, and evidence after an injury on someone else’s property.</p>
+              <div class="pi-practice-card-heading"><span class="pi-category-icon">03</span><h3 data-en="Premises Liability" data-es="Responsabilidad De Propiedad">Premises Liability</h3></div>
+              <p data-en="Property owners may be responsible when unsafe conditions cause injuries. LeUnes Law Firm helps clients evaluate hazards, notice issues, maintenance failures, and evidence after an injury on someone else’s property." data-es="Los propietarios pueden ser responsables cuando condiciones inseguras causan lesiones. LeUnes Law Firm ayuda a los clientes a evaluar peligros, problemas de aviso, fallas de mantenimiento y evidencia tras una lesión en propiedad ajena.">Property owners may be responsible when unsafe conditions cause injuries. LeUnes Law Firm helps clients evaluate hazards, notice issues, maintenance failures, and evidence after an injury on someone else’s property.</p>
               <div class="pi-detail-grid">
-                <div><h4>Common Cases</h4><ul><li>Falls on unsafe surfaces</li><li>Poor lighting</li><li>Unsafe walkways</li><li>Negligent maintenance</li></ul></div>
-                <div><h4>Important Proof</h4><ul><li>Photos and videos</li><li>Incident reports</li><li>Witness names</li><li>Prior complaints</li></ul></div>
+                <div><h4 data-en="Common Cases" data-es="Casos Comunes">Common Cases</h4><ul><li data-en="Falls on unsafe surfaces" data-es="Caídas en superficies inseguras">Falls on unsafe surfaces</li><li data-en="Poor lighting" data-es="Iluminación deficiente">Poor lighting</li><li data-en="Unsafe walkways" data-es="Pasillos inseguros">Unsafe walkways</li><li data-en="Negligent maintenance" data-es="Mantenimiento negligente">Negligent maintenance</li></ul></div>
+                <div><h4 data-en="Important Proof" data-es="Evidencia Importante">Important Proof</h4><ul><li data-en="Photos and videos" data-es="Fotos y videos">Photos and videos</li><li data-en="Incident reports" data-es="Reportes del incidente">Incident reports</li><li data-en="Witness names" data-es="Nombres de testigos">Witness names</li><li data-en="Prior complaints" data-es="Quejas previas">Prior complaints</li></ul></div>
               </div>
-              <a href="contact.html" class="text-link">Free Consultation →</a>
+              <a href="contact.html" class="text-link" data-en="Free Consultation →" data-es="Consulta Gratis →">Free Consultation →</a>
             </div>
           </article>
 
@@ -138,13 +147,13 @@
               <img src="assets/Client speaking with a legal professional.png" alt="Client speaking with a legal professional" />
             </div>
             <div class="pi-practice-card-copy">
-              <div class="pi-practice-card-heading"><span class="pi-category-icon">04</span><h3>Workplace &amp; Industrial Injuries</h3></div>
-              <p>Workplace and industrial injuries can involve employers, contractors, property owners, equipment companies, and third parties. A careful review can help identify who may be legally responsible.</p>
+              <div class="pi-practice-card-heading"><span class="pi-category-icon">04</span><h3 data-en="Workplace &amp; Industrial Injuries" data-es="Lesiones Laborales E Industriales">Workplace &amp; Industrial Injuries</h3></div>
+              <p data-en="Workplace and industrial injuries can involve employers, contractors, property owners, equipment companies, and third parties. A careful review can help identify who may be legally responsible." data-es="Las lesiones laborales e industriales pueden involucrar empleadores, contratistas, propietarios, empresas de equipos y terceros. Una revisión cuidadosa puede ayudar a identificar quién puede ser legalmente responsable.">Workplace and industrial injuries can involve employers, contractors, property owners, equipment companies, and third parties. A careful review can help identify who may be legally responsible.</p>
               <div class="pi-detail-grid">
-                <div><h4>Common Cases</h4><ul><li>Job site injuries</li><li>Industrial accidents</li><li>Equipment-related injuries</li><li>Contractor negligence</li></ul></div>
-                <div><h4>Potential Issues</h4><ul><li>Safety rules</li><li>Training records</li><li>Third-party claims</li><li>Worksite control</li></ul></div>
+                <div><h4 data-en="Common Cases" data-es="Casos Comunes">Common Cases</h4><ul><li data-en="Job site injuries" data-es="Lesiones en el sitio de trabajo">Job site injuries</li><li data-en="Industrial accidents" data-es="Accidentes industriales">Industrial accidents</li><li data-en="Equipment-related injuries" data-es="Lesiones relacionadas con equipos">Equipment-related injuries</li><li data-en="Contractor negligence" data-es="Negligencia del contratista">Contractor negligence</li></ul></div>
+                <div><h4 data-en="Potential Issues" data-es="Posibles Problemas">Potential Issues</h4><ul><li data-en="Safety rules" data-es="Normas de seguridad">Safety rules</li><li data-en="Training records" data-es="Registros de capacitación">Training records</li><li data-en="Third-party claims" data-es="Reclamos contra terceros">Third-party claims</li><li data-en="Worksite control" data-es="Control del sitio de trabajo">Worksite control</li></ul></div>
               </div>
-              <a href="contact.html" class="text-link">Free Consultation →</a>
+              <a href="contact.html" class="text-link" data-en="Free Consultation →" data-es="Consulta Gratis →">Free Consultation →</a>
             </div>
           </article>
 
@@ -153,14 +162,55 @@
               <img src="assets/Attorney meeting with clients.png" alt="Attorney meeting with clients" />
             </div>
             <div class="pi-practice-card-copy">
-              <div class="pi-practice-card-heading"><span class="pi-category-icon">05</span><h3>Wrongful Death</h3></div>
-              <p>Families facing preventable loss deserve clear guidance, compassion, and careful legal review. LeUnes Law Firm helps families understand potential claims and next steps after a fatal incident.</p>
+              <div class="pi-practice-card-heading"><span class="pi-category-icon">05</span><h3 data-en="Wrongful Death" data-es="Muerte Injusta">Wrongful Death</h3></div>
+              <p data-en="Families facing preventable loss deserve clear guidance, compassion, and careful legal review. LeUnes Law Firm helps families understand potential claims and next steps after a fatal incident." data-es="Las familias que enfrentan una pérdida evitable merecen orientación clara, compasión y una revisión legal cuidadosa. LeUnes Law Firm ayuda a las familias a entender posibles reclamos y próximos pasos tras un incidente fatal.">Families facing preventable loss deserve clear guidance, compassion, and careful legal review. LeUnes Law Firm helps families understand potential claims and next steps after a fatal incident.</p>
               <div class="pi-detail-grid">
-                <div><h4>Common Cases</h4><ul><li>Fatal vehicle crashes</li><li>Unsafe premises</li><li>Worksite incidents</li><li>Negligent conduct</li></ul></div>
-                <div><h4>Next Steps</h4><ul><li>Preserve evidence</li><li>Review reports</li><li>Identify responsible parties</li><li>Understand legal options</li></ul></div>
+                <div><h4 data-en="Common Cases" data-es="Casos Comunes">Common Cases</h4><ul><li data-en="Fatal vehicle crashes" data-es="Choques vehiculares fatales">Fatal vehicle crashes</li><li data-en="Unsafe premises" data-es="Propiedades inseguras">Unsafe premises</li><li data-en="Worksite incidents" data-es="Incidentes en el sitio de trabajo">Worksite incidents</li><li data-en="Negligent conduct" data-es="Conducta negligente">Negligent conduct</li></ul></div>
+                <div><h4 data-en="Next Steps" data-es="Próximos Pasos">Next Steps</h4><ul><li data-en="Preserve evidence" data-es="Preservar evidencia">Preserve evidence</li><li data-en="Review reports" data-es="Revisar reportes">Review reports</li><li data-en="Identify responsible parties" data-es="Identificar partes responsables">Identify responsible parties</li><li data-en="Understand legal options" data-es="Entender opciones legales">Understand legal options</li></ul></div>
               </div>
-              <a href="contact.html" class="text-link">Free Consultation →</a>
+              <a href="contact.html" class="text-link" data-en="Free Consultation →" data-es="Consulta Gratis →">Free Consultation →</a>
             </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Additional Legal Services -->
+    <section class="additional-services-section" id="additional-services">
+      <div class="additional-services-inner">
+        <div class="section-heading centered">
+          <p class="section-eyebrow" data-en="Additional Services" data-es="Servicios Adicionales">Additional Services</p>
+          <h2 data-en="Real Estate &amp; Estate Planning" data-es="Bienes Raíces Y Planificación Patrimonial">Real Estate &amp; Estate Planning</h2>
+          <p data-en="Personal injury is the firm's primary focus, but LeUnes Law Firm also assists clients with the following matters." data-es="Las lesiones personales son el enfoque principal de la firma, pero LeUnes Law Firm también ayuda a los clientes con los siguientes asuntos.">
+            Personal injury is the firm's primary focus, but LeUnes Law Firm also assists clients with the following matters.
+          </p>
+        </div>
+
+        <div class="additional-services-grid">
+          <article class="resource-card" id="real-estate">
+            <h3 data-en="Real Estate" data-es="Bienes Raíces">Real Estate</h3>
+            <p data-en="Guidance on property transactions and rental agreements." data-es="Orientación sobre transacciones de propiedad y contratos de alquiler.">
+              Guidance on property transactions and rental agreements.
+            </p>
+            <ul>
+              <li data-en="Deed and title transfers" data-es="Transferencias de escrituras y títulos">Deed and title transfers</li>
+              <li data-en="Leasing and rental agreement review and preparation" data-es="Revisión y preparación de contratos de arrendamiento y alquiler">Leasing and rental agreement review and preparation</li>
+            </ul>
+            <a href="contact.html" class="text-link" data-en="Ask A Question →" data-es="Haga Una Pregunta →">Ask A Question →</a>
+          </article>
+
+          <article class="resource-card" id="estate-planning">
+            <h3 data-en="Estate Planning" data-es="Planificación Patrimonial">Estate Planning</h3>
+            <p data-en="Helping clients protect their families and assets with clear, personalized planning documents." data-es="Ayudamos a los clientes a proteger a sus familias y bienes con documentos de planificación claros y personalizados.">
+              Helping clients protect their families and assets with clear, personalized planning documents.
+            </p>
+            <ul>
+              <li data-en="Wills" data-es="Testamentos">Wills</li>
+              <li data-en="Trusts" data-es="Fideicomisos">Trusts</li>
+              <li data-en="Powers of attorney" data-es="Poderes notariales">Powers of attorney</li>
+              <li data-en="Asset distribution" data-es="Distribución de bienes">Asset distribution</li>
+            </ul>
+            <a href="contact.html" class="text-link" data-en="Ask A Question →" data-es="Haga Una Pregunta →">Ask A Question →</a>
           </article>
         </div>
       </div>
@@ -360,7 +410,7 @@
             Get clear legal guidance, personal attention, and experienced representation from consultation through resolution.
           </p>
 
-          <a href="tel:+10000000000" class="hero-button" data-en="Call Now" data-es="Llamar Ahora">
+          <a href="tel:+18326202874" class="hero-button" data-en="Call Now" data-es="Llamar Ahora">
             Call Now
           </a>
         </div>
@@ -372,47 +422,52 @@
     </section>
   </main>
 
-  <footer class="site-footer">
+    <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-brand">
         <img src="assets/leunes-logo.png" alt="LeUnes Law Firm Logo" class="footer-logo" />
-        <p>LeUnes Law Firm provides experienced personal injury representation for clients across Texas.</p>
-        <a href="contact.html" class="footer-cta">Free Consultation</a>
+
+        <p data-en="LeUnes Law Firm provides experienced personal injury representation for clients across Texas." data-es="LeUnes Law Firm ofrece representación experimentada en casos de lesiones personales para clientes en todo Texas.">
+          LeUnes Law Firm provides experienced personal injury representation for clients across Texas.
+        </p>
+
+        <a href="contact.html" class="footer-cta" data-en="Free Consultation" data-es="Consulta Gratis">Free Consultation</a>
       </div>
 
       <div class="footer-column">
-        <h3>Navigation</h3>
-        <a href="homepage.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="case-results.html">Case Results</a>
-        <a href="practice-areas.html">Practice Areas</a>
-        <a href="recources.html">Resources</a>
-        <a href="contact.html">Contact</a>
+        <h3 data-en="Navigation" data-es="Navegación">Navigation</h3>
+        <a href="index.html" data-en="Home" data-es="Inicio">Home</a>
+        <a href="about.html" data-en="About" data-es="Acerca De">About</a>
+        <a href="case-results.html" data-en="Case Results" data-es="Resultados">Case Results</a>
+        <a href="practice-areas.html" data-en="Practice Areas" data-es="Áreas De Práctica">Practice Areas</a>
+        <a href="recources.html" data-en="Resources" data-es="Recursos">Resources</a><a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a>
       </div>
 
       <div class="footer-column">
-        <h3>Practice Areas</h3>
-        <a href="practice-areas.html#auto-accidents">Auto Accidents</a>
-        <a href="practice-areas.html#truck-accidents">Truck Accidents</a>
-        <a href="practice-areas.html#premises-liability">Premises Liability</a>
-        <a href="practice-areas.html#workplace-injuries">Workplace Injuries</a>
-        <a href="practice-areas.html#wrongful-death">Wrongful Death</a>
+        <h3 data-en="Practice Areas" data-es="Áreas De Práctica">Practice Areas</h3>
+        <a href="practice-areas.html#auto-accidents" data-en="Auto Accidents" data-es="Accidentes Automovilísticos">Auto Accidents</a>
+        <a href="practice-areas.html#truck-accidents" data-en="Truck Accidents" data-es="Accidentes De Camiones">Truck Accidents</a>
+        <a href="practice-areas.html#premises-liability" data-en="Premises Liability" data-es="Responsabilidad De Propiedad">Premises Liability</a>
+        <a href="practice-areas.html#workplace-injuries" data-en="Workplace Injuries" data-es="Lesiones Laborales">Workplace Injuries</a>
+        <a href="practice-areas.html#wrongful-death" data-en="Wrongful Death" data-es="Muerte Injusta">Wrongful Death</a>
+        <a href="practice-areas.html#real-estate" data-en="Real Estate" data-es="Bienes Raíces">Real Estate</a>
+        <a href="practice-areas.html#estate-planning" data-en="Estate Planning" data-es="Planificación Patrimonial">Estate Planning</a>
       </div>
 
       <div class="footer-column">
-        <h3>Contact</h3>
-        <p>Cypress, Texas</p>
-        <a href="tel:+10000000000">(000) 000-0000</a>
+        <h3 data-en="Contact" data-es="Contacto">Contact</h3>
+        <p data-en="Cypress, Texas" data-es="Cypress, Texas">Cypress, Texas</p>
+        <a href="tel:+18326202874">(832) 620-2874</a>
         <a href="mailto:info@leuneslaw.com">info@leuneslaw.com</a>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <p>© 2026 LeUnes Law Firm. All Rights Reserved.</p>
-      <p>Prior results do not guarantee a similar outcome. This website is for informational purposes only.</p>
+      <p data-en="© 2026 LeUnes Law Firm. All Rights Reserved." data-es="© 2026 LeUnes Law Firm. Todos Los Derechos Reservados.">© 2026 LeUnes Law Firm. All Rights Reserved.</p>
+      <p data-en="Prior results do not guarantee a similar outcome. This website is for informational purposes only." data-es="Los resultados anteriores no garantizan un resultado similar. Este sitio web es solo para fines informativos.">Prior results do not guarantee a similar outcome. This website is for informational purposes only.</p>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=2"></script>
 </body>
 </html>
