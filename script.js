@@ -70,45 +70,49 @@ practiceAccordionItems.forEach((item) => {
    Testimonials Carousel + Case Results Reveal
 ========================= */
 
+// Real client reviews from the firm's public Google Business Profile (5.0 stars, 13 reviews).
+// Excerpts are verbatim; names shortened to first name + last initial for privacy.
 const leunesReviews = [
   {
-    name: "Sarah M., Houston",
-    text: "Christopher took the time to explain every step of the process and always made himself available when I had questions. I never felt like just another case.",
-    textEs: "Christopher se tomó el tiempo de explicar cada paso del proceso y siempre estuvo disponible cuando tuve preguntas. Nunca sentí que era solo un caso más."
+    name: "Shelly S.",
+    text: "Chay made a difficult experience dealing with insurance companies work so smoothly. He handled everything very professionally and kept me in the loop throughout the process. Very pleased with the settlement. He should be your first phone call!",
+    textEs: "Chay hizo que una experiencia dif\u00edcil con las compa\u00f1\u00edas de seguros fluyera sin problemas. Manej\u00f3 todo de manera muy profesional y me mantuvo informada durante todo el proceso. Muy satisfecha con el acuerdo. \u00a1Deber\u00eda ser su primera llamada!"
   },
   {
-    name: "Michael R., Cypress",
-    text: "The communication was clear from the beginning. I always knew what was happening and what the next step would be.",
-    textEs: "La comunicación fue clara desde el principio. Siempre supe qué estaba pasando y cuál sería el siguiente paso."
+    name: "Angee R.",
+    text: "We were so fortunate to have Mr. LeUnes represent us when an uninsured and unlicensed driver rear ended our daughter and totaled her car. His services were invaluable in helping us navigate a difficult situation. I highly recommend him and his firm.",
+    textEs: "Tuvimos mucha suerte de contar con el Sr. LeUnes cuando un conductor sin seguro ni licencia choc\u00f3 por detr\u00e1s a nuestra hija y destruy\u00f3 su auto. Sus servicios fueron invaluables para ayudarnos a navegar una situaci\u00f3n dif\u00edcil. Lo recomiendo mucho a \u00e9l y a su firma."
   },
   {
-    name: "Daniel P., Houston",
-    text: "LeUnes Law Firm handled the insurance company and helped me understand the process after my accident.",
-    textEs: "LeUnes Law Firm se encargó de la aseguradora y me ayudó a entender el proceso después de mi accidente."
+    name: "Ethan G.",
+    text: "I got in a car accident last year and Chay helped me out and took care of everything for me, even guided me as to what to do next. I have recommended people to use Chay before and will continue to recommend people here.",
+    textEs: "Tuve un accidente automovil\u00edstico el a\u00f1o pasado y Chay me ayud\u00f3 y se encarg\u00f3 de todo, incluso me gui\u00f3 sobre qu\u00e9 hacer despu\u00e9s. Ya he recomendado a Chay antes y seguir\u00e9 recomendando este lugar."
   },
   {
-    name: "Vanessa G., Katy",
-    text: "I appreciated the personal attention and honest guidance. The team was responsive and professional throughout my case.",
-    textEs: "Aprecié la atención personal y la orientación honesta. El equipo fue receptivo y profesional durante todo mi caso."
+    name: "Amy N.",
+    text: "Chay is extremely knowledgeable and kept me well informed at all times during the process. I appreciated your attention to detail and for working so tirelessly on my car accident case.",
+    textEs: "Chay tiene amplios conocimientos y me mantuvo bien informada en todo momento durante el proceso. Agradec\u00ed su atenci\u00f3n al detalle y su trabajo incansable en mi caso de accidente automovil\u00edstico."
   },
   {
-    name: "Robert T., Texas",
-    text: "Christopher gave straightforward advice and helped me feel prepared during a stressful situation.",
-    textEs: "Christopher me dio consejos claros y me ayudó a sentirme preparado durante una situación estresante."
+    name: "Carrie S.",
+    text: "Chay is so professional and helpful! He spent a lot of time on our case and was very quick to respond to any emails or phone calls. I would highly recommend using him for any real estate problems that may arise.",
+    textEs: "\u00a1Chay es muy profesional y servicial! Dedic\u00f3 mucho tiempo a nuestro caso y respondi\u00f3 muy r\u00e1pido a correos y llamadas. Lo recomiendo mucho para cualquier problema de bienes ra\u00edces que pueda surgir."
   },
   {
-    name: "Amanda L., Houston",
-    text: "The firm was organized, patient, and easy to reach whenever I had questions about my injury claim.",
-    textEs: "La firma fue organizada, paciente y fácil de contactar cada vez que tuve preguntas sobre mi reclamo por lesiones."
+    name: "Steven H.",
+    text: "Helped with estate docs and some contracts. Great attorney and great firm!",
+    textEs: "Ayud\u00f3 con documentos patrimoniales y algunos contratos. \u00a1Excelente abogado y excelente firma!"
   }
 ];
 
 function updateTestimonials(startIndex = 0) {
   const cards = document.querySelectorAll(".testimonial-card");
-  if (!cards.length) return;
+  if (!cards.length || !leunesReviews.length) return;
 
   cards.forEach((card, position) => {
     const review = leunesReviews[(startIndex + position) % leunesReviews.length];
+    if (!review) return;
+
     const nameEl = card.querySelector(".testimonial-name");
     const textEl = card.querySelector("p:last-child");
     const starsEl = card.querySelector(".testimonial-stars");
@@ -124,7 +128,7 @@ let testimonialTimer = null;
 const testimonialCards = document.querySelectorAll(".testimonial-card");
 
 function moveTestimonials(nextIndex) {
-  if (!testimonialCards.length) return;
+  if (!testimonialCards.length || !leunesReviews.length) return;
 
   testimonialCards.forEach((card) => card.classList.add("is-changing"));
 
@@ -142,7 +146,7 @@ function resetTestimonialTimer() {
   }, 5200);
 }
 
-if (testimonialCards.length) {
+if (testimonialCards.length && leunesReviews.length) {
   updateTestimonials(testimonialIndex);
 
   const nextButtons = document.querySelectorAll(".testimonial-next");
@@ -483,14 +487,25 @@ learnMoreButtons.forEach((button) => {
   });
 });
 
-blogModalClose.addEventListener("click", () => {
-  blogModal.classList.remove("open");
-  document.body.style.overflow = "auto";
-});
-
-blogModal.addEventListener("click", (e) => {
-  if (e.target === blogModal) {
+if (blogModalClose) {
+  blogModalClose.addEventListener("click", () => {
     blogModal.classList.remove("open");
     document.body.style.overflow = "auto";
-  }
-});
+  });
+}
+
+if (blogModal) {
+  blogModal.addEventListener("click", (e) => {
+    if (e.target === blogModal) {
+      blogModal.classList.remove("open");
+      document.body.style.overflow = "auto";
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && blogModal.classList.contains("open")) {
+      blogModal.classList.remove("open");
+      document.body.style.overflow = "auto";
+    }
+  });
+}

@@ -15,7 +15,16 @@
 
   <title>Resources | LeUnes Law Firm</title>
 
-  <link rel="stylesheet" href="styles.css?v=4" />
+  <link rel="stylesheet" href="styles.css?v=13" />
+  <!-- Google Analytics (GA4) - replace G-XXXXXXXXXX with the real Measurement ID before launch -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', { anonymize_ip: true });
+  </script>
+
 </head>
 
 <body>
@@ -30,7 +39,7 @@
         <a href="about.html" class="nav-link" data-en="About Us" data-es="Sobre Nosotros">About Us</a>
         <a href="case-results.html" class="nav-link" data-en="Case Results" data-es="Resultados">Case Results</a>
         <a href="practice-areas.html" class="nav-link" data-en="Practice Areas" data-es="Áreas De Práctica">Practice Areas</a>
-        <a href="recources.html" class="nav-link active" data-en="Resources" data-es="Recursos">Resources</a>
+        <a href="resources.html" class="nav-link active" data-en="Resources" data-es="Recursos">Resources</a>
       </nav>
 
       <div class="header-actions">
@@ -48,7 +57,7 @@
       <a href="about.html" class="mobile-nav-link" data-en="About Us" data-es="Sobre Nosotros">About Us</a>
       <a href="case-results.html" class="mobile-nav-link" data-en="Case Results" data-es="Resultados">Case Results</a>
       <a href="practice-areas.html" class="mobile-nav-link" data-en="Practice Areas" data-es="Áreas De Práctica">Practice Areas</a>
-      <a href="recources.html" class="mobile-nav-link active" data-en="Resources" data-es="Recursos">Resources</a>
+      <a href="resources.html" class="mobile-nav-link active" data-en="Resources" data-es="Recursos">Resources</a>
       <a href="contact.html" class="mobile-nav-link" data-en="Contact" data-es="Contacto">Contact</a>
     </nav>
   </header>
@@ -61,7 +70,7 @@
           <h1 data-en="Clear Legal Guidance For Injured Texans." data-es="Orientación Legal Clara Para Texanos Lesionados.">Clear Legal Guidance For Injured Texans.</h1>
           <p data-en="Learn what to do after an injury, how insurance companies evaluate claims, and when speaking with an attorney may protect your case." data-es="Aprenda qué hacer después de una lesión, cómo las aseguradoras evalúan los reclamos, y cuándo hablar con un abogado puede proteger su caso.">Learn what to do after an injury, how insurance companies evaluate claims, and when speaking with an attorney may protect your case.</p>
           <div class="interior-hero-actions">
-            <a href="contact.html" class="hero-button" data-en="Free Consultation" data-es="Consulta Gratis">Free Consultation</a>
+            <a href="contact.html" class="hero-button" data-en="Free Injury Consultation" data-es="Consulta Gratis De Lesiones">Free Injury Consultation</a>
           </div>
         </div>
 
@@ -92,7 +101,7 @@
         <article class="resource-side-note">
           <h3 data-en="Need guidance now?" data-es="¿Necesita Orientación Ahora?">Need guidance now?</h3>
           <p data-en="Speak with LeUnes Law Firm before giving recorded statements or accepting an early insurance offer." data-es="Hable con LeUnes Law Firm antes de dar declaraciones grabadas o aceptar una oferta temprana del seguro.">Speak with LeUnes Law Firm before giving recorded statements or accepting an early insurance offer.</p>
-          <a href="contact.html" class="why-button" data-en="Free Consultation" data-es="Consulta Gratis">Free Consultation</a>
+          <a href="contact.html" class="why-button" data-en="Free Injury Consultation" data-es="Consulta Gratis De Lesiones">Free Injury Consultation</a>
         </article>
       </div>
     </section>
@@ -188,7 +197,7 @@
           LeUnes Law Firm provides experienced personal injury representation for clients across Texas.
         </p>
 
-        <a href="contact.html" class="footer-cta" data-en="Free Consultation" data-es="Consulta Gratis">Free Consultation</a>
+        <a href="contact.html" class="footer-cta" data-en="Free Injury Consultation" data-es="Consulta Gratis De Lesiones">Free Injury Consultation</a>
       </div>
 
       <div class="footer-column">
@@ -197,12 +206,13 @@
         <a href="about.html" data-en="About" data-es="Acerca De">About</a>
         <a href="case-results.html" data-en="Case Results" data-es="Resultados">Case Results</a>
         <a href="practice-areas.html" data-en="Practice Areas" data-es="Áreas De Práctica">Practice Areas</a>
-        <a href="recources.html" data-en="Resources" data-es="Recursos">Resources</a><a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a>
+        <a href="resources.html" data-en="Resources" data-es="Recursos">Resources</a><a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a>
       </div>
 
       <div class="footer-column">
         <h3 data-en="Practice Areas" data-es="Áreas De Práctica">Practice Areas</h3>
         <a href="practice-areas.html#auto-accidents" data-en="Auto Accidents" data-es="Accidentes Automovilísticos">Auto Accidents</a>
+        <a href="practice-areas.html#motorcycle-accidents" data-en="Motorcycle Accidents" data-es="Accidentes De Motocicleta">Motorcycle Accidents</a>
         <a href="practice-areas.html#truck-accidents" data-en="Truck Accidents" data-es="Accidentes De Camiones">Truck Accidents</a>
         <a href="practice-areas.html#premises-liability" data-en="Premises Liability" data-es="Responsabilidad De Propiedad">Premises Liability</a>
         <a href="practice-areas.html#workplace-injuries" data-en="Workplace Injuries" data-es="Lesiones Laborales">Workplace Injuries</a>
@@ -213,7 +223,7 @@
 
       <div class="footer-column">
         <h3 data-en="Contact" data-es="Contacto">Contact</h3>
-        <p data-en="Cypress, Texas" data-es="Cypress, Texas">Cypress, Texas</p>
+        <a class="footer-address" href="https://www.google.com/maps/search/?api=1&amp;query=14150+Huffmeister+Rd+Ste+200-110+Cypress+TX+77429" target="_blank" rel="noopener noreferrer">14150 Huffmeister Rd, Ste 200-110<br />Cypress, TX 77429</a>
         <a href="tel:+18324227761">(832) 422-7761</a>
         <a href="mailto:info@leuneslaw.com">info@leuneslaw.com</a>
       </div>
@@ -221,10 +231,12 @@
 
     <div class="footer-bottom">
       <p data-en="© 2026 LeUnes Law Firm. All Rights Reserved." data-es="© 2026 LeUnes Law Firm. Todos Los Derechos Reservados.">© 2026 LeUnes Law Firm. All Rights Reserved.</p>
-      <p data-en="Prior results do not guarantee a similar outcome. This website is for informational purposes only." data-es="Los resultados anteriores no garantizan un resultado similar. Este sitio web es solo para fines informativos.">Prior results do not guarantee a similar outcome. This website is for informational purposes only.</p>
+      <p data-en="Prior results do not guarantee a similar outcome. This website is for informational purposes only and does not create an attorney-client relationship." data-es="Los resultados anteriores no garantizan un resultado similar. Este sitio web es solo para fines informativos y no crea una relaci&#243;n abogado-cliente.">Prior results do not guarantee a similar outcome. This website is for informational purposes only and does not create an attorney-client relationship.</p>
+      <p data-en="Christopher C. LeUnes is not certified by the Texas Board of Legal Specialization. Principal office: Cypress, Texas." data-es="Christopher C. LeUnes no est&#225; certificado por el Colegio de Especializaci&#243;n Legal de Texas. Oficina principal: Cypress, Texas.">Christopher C. LeUnes is not certified by the Texas Board of Legal Specialization. Principal office: Cypress, Texas.</p>
+      <p class="footer-legal-links"><a href="privacy-policy.html" data-en="Privacy Policy" data-es="Pol&#237;tica de Privacidad">Privacy Policy</a> <span aria-hidden="true">&#183;</span> <a href="terms-of-use.html" data-en="Terms of Use" data-es="T&#233;rminos de Uso">Terms of Use</a></p>
     </div>
   </footer>
 
-  <script src="script.js?v=4"></script>
+  <script src="script.js?v=13"></script>
 </body>
 </html>
