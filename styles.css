@@ -225,19 +225,21 @@ span {
   z-index: 3;
 }
 
+/* Matched to .interior-hero-text so the homepage and the interior pages read
+   at the same weight and scale. */
 .hero-text h1 {
   max-width: 640px;
-  font-size: 54px;
-  line-height: 1.14;
-  letter-spacing: -0.025em;
-  margin-bottom: 24px;
+  font-size: 48px;
+  line-height: 1.16;
+  letter-spacing: -0.02em;
+  margin-bottom: 22px;
 }
 
 .hero-text p {
-  max-width: 616px;
-  font-size: 22px;
-  line-height: 1.5;
-  margin-bottom: 48px;
+  max-width: 580px;
+  font-size: 17px;
+  line-height: 1.65;
+  margin-bottom: 34px;
 }
 
 .hero-button,
@@ -313,11 +315,12 @@ span {
   z-index: 1;
 }
 
+/* Background-removed bust, standing free on the hero's bottom edge. */
 .attorney-image {
   position: absolute;
-  right: 96px;
-  bottom: -8px;
-  width: min(456px, 42vw);
+  right: 108px;
+  bottom: 0;
+  width: min(430px, 40vw);
   max-height: 100%;
   object-fit: contain;
   object-position: bottom center;
@@ -340,6 +343,10 @@ span {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 240px;
+  /* Hairline gaps let the grid's own background show through as dividers
+     between the stat cards, which are otherwise all the same navy. */
+  gap: 1px;
+  background: rgba(255, 255, 255, 0.26);
 }
 
 .credibility-card {
@@ -350,6 +357,7 @@ span {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 22%;
 }
 
 .text-card {
@@ -803,7 +811,7 @@ span {
 }
 
 .meet-preview-image img {
-  width: min(456px, 42vw);
+  width: min(440px, 42vw);
   max-height: 100%;
   object-fit: contain;
   object-position: bottom center;
@@ -1033,6 +1041,52 @@ span {
   color: var(--gold);
 }
 
+.footer-social {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 50%;
+  color: rgba(255, 255, 255, 0.78);
+  transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.footer-social a:hover {
+  color: var(--navy);
+  background: var(--gold);
+  border-color: var(--gold);
+}
+
+.footer-social svg {
+  width: 19px;
+  height: 19px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* TikTok mark reads as a filled glyph rather than a line drawing. */
+.footer-social svg path {
+  fill: currentColor;
+  stroke: none;
+}
+
+.footer-social svg .solid {
+  fill: currentColor;
+  stroke: none;
+}
+
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.14);
   max-width: 1512px;
@@ -1102,12 +1156,8 @@ span {
     padding-left: 56px;
   }
 
-  .hero-text h1 {
-    font-size: 50px;
-  }
-
   .hero-text p {
-    font-size: 20px;
+    max-width: 540px;
   }
 
   .hero-circle {
@@ -1220,10 +1270,6 @@ span {
 
   .hero-text h1 {
     font-size: 44px;
-  }
-
-  .hero-text p {
-    font-size: 19px;
   }
 
   .credibility-grid {
@@ -1385,7 +1431,6 @@ span {
   }
 
   .hero-text p {
-    font-size: 18px;
     margin-bottom: 32px;
   }
   .hero-button {
@@ -1665,7 +1710,7 @@ span {
 }
 
 .about-hero-image img {
-  width: 390px;
+  width: 420px;
   max-height: 100%;
   object-fit: contain;
   object-position: bottom center;
@@ -1714,6 +1759,20 @@ span {
   display: grid;
   grid-template-columns: 1fr 620px;
   gap: 96px;
+}
+
+.about-story-image {
+  grid-column: 1;
+  align-self: center;
+  justify-self: end;
+  width: 100%;
+  max-width: 480px;
+}
+
+.about-story-image img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .about-story-copy {
@@ -2077,7 +2136,7 @@ span {
 }
 
 .team-photo img {
-  max-height: 260px;
+  max-height: 100%;
   width: auto;
   object-fit: contain;
 }
@@ -2127,16 +2186,58 @@ span {
   margin-top: 12px;
 }
 
-.comparison-grid {
-  display: grid;
-  grid-template-columns: 1fr 56px 1fr;
-  gap: 24px;
-  align-items: center;
+/* Segmented switch: one side at a time instead of two columns side by side. */
+.comparison-switch {
+  display: inline-flex;
+  gap: 6px;
+  padding: 6px;
+  background: var(--white);
+  border-radius: 999px;
+  box-shadow: 0 6px 20px rgba(31, 61, 99, 0.1);
+  margin-bottom: 40px;
 }
 
-.comparison-column {
+.comparison-switch-btn {
+  appearance: none;
+  border: 0;
+  cursor: pointer;
+  background: transparent;
+  border-radius: 999px;
+  padding: 14px 40px;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: rgba(44, 42, 39, 0.6);
+  transition: background-color 0.22s ease, color 0.22s ease;
+}
+
+.comparison-switch-btn:hover {
+  color: var(--navy);
+}
+
+.comparison-switch-btn:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.comparison-switch-btn.active {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.comparison-panels {
+  max-width: 760px;
+}
+
+.comparison-panel {
   display: grid;
-  gap: 24px;
+  gap: 20px;
+}
+
+.comparison-panel[hidden] {
+  display: none;
 }
 
 .comparison-box {
@@ -2157,14 +2258,6 @@ span {
 .comparison-box.highlight {
   background: var(--navy);
   color: var(--white);
-}
-
-.vs-column {
-  display: grid;
-  gap: 64px;
-  text-align: center;
-  color: var(--text-dark);
-  font-size: 16px;
 }
 
 .about-faq-section {
@@ -2317,13 +2410,6 @@ span {
     margin: 0 auto;
   }
 
-  .comparison-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .vs-column {
-    display: none;
-  }
 }
 
 @media (max-width: 760px) {
@@ -2408,34 +2494,6 @@ span {
   position: relative;
   z-index: 1;
   padding-top: 144px;
-}
-
-/* Fix VS labels so every VS aligns with its row */
-.comparison-grid {
-  align-items: stretch;
-}
-
-.comparison-column,
-.vs-column {
-  display: grid;
-  grid-template-rows: repeat(4, 88px);
-  gap: 24px;
-}
-
-.comparison-box {
-  min-height: 88px;
-  height: 88px;
-}
-
-.vs-column {
-  text-align: center;
-}
-
-.vs-column span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 1;
 }
 
 /* =========================
@@ -2700,14 +2758,6 @@ span {
     padding-bottom: 28px;
   }
 
-  .comparison-column {
-    grid-template-rows: none;
-  }
-
-  .comparison-box {
-    height: auto;
-    min-height: 88px;
-  }
 }
 
 @media (max-width: 760px) {
@@ -3068,14 +3118,17 @@ span {
 
 .pi-editorial-image {
   height: 520px;
-  border-radius: 18px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
   overflow: hidden;
 }
 
 .pi-editorial-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: min(430px, 100%);
+  max-height: 100%;
+  object-fit: contain;
+  object-position: bottom center;
 }
 
 .pi-editorial-text .section-eyebrow {
@@ -3289,8 +3342,9 @@ span {
 
 .pi-cta-image img {
   max-height: 100%;
-  width: 360px;
+  width: 400px;
   object-fit: contain;
+  object-position: bottom center;
 }
 
 /* =========================
@@ -4034,7 +4088,7 @@ span {
 }
 
 .interior-hero-image img {
-  width: 320px;
+  width: 370px;
   max-height: 100%;
   object-fit: contain;
   object-position: bottom center;
@@ -4126,13 +4180,38 @@ span {
 
 .pi-practice-card-media {
   min-height: 410px;
-  background: rgba(31, 61, 99, 0.08);
+  background: linear-gradient(155deg, var(--navy) 0%, var(--navy-dark) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
-.pi-practice-card-media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+/* Soft gold disc behind the icon, echoing the circle in the homepage hero. */
+.pi-practice-card-media::before {
+  content: "";
+  position: absolute;
+  width: 232px;
+  height: 232px;
+  border-radius: 50%;
+  background: var(--gold);
+  opacity: 0.14;
+}
+
+.pi-practice-icon {
+  position: relative;
+  width: 128px;
+  height: 128px;
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 2.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.pi-practice-icon .solid {
+  fill: var(--gold);
+  stroke: none;
 }
 
 .pi-practice-card-copy {
@@ -4447,5 +4526,36 @@ span {
   .form-row select,
   .form-row textarea {
     font-size: 16px;
+  }
+}
+
+@media (max-width: 760px) {
+  /* Interior heroes on About, Case Results, Practice Areas and Resources drop
+     the portrait and the stat bar on phones so the page opens on the copy. */
+  .interior-hero-lean .interior-hero-image,
+  .interior-hero-lean .interior-stat-bar {
+    display: none;
+  }
+
+  .interior-hero-lean.interior-hero-section,
+  .interior-hero-lean.about-hero-section,
+  .interior-hero-lean.case-hero-section,
+  .interior-hero-lean.resource-hero-section {
+    padding-bottom: 56px;
+  }
+
+  .comparison-switch {
+    display: flex;
+    width: 100%;
+  }
+
+  .comparison-switch-btn {
+    flex: 1;
+    padding: 14px 12px;
+  }
+
+  .about-story-image {
+    max-width: 300px;
+    margin: 0 auto 32px;
   }
 }

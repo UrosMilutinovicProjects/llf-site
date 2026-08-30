@@ -3,9 +3,17 @@
   "configurations": [
     {
       "name": "leunes-static",
-      "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8080"],
-      "port": 8080
+      "runtimeExecutable": "powershell",
+      "runtimeArgs": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "C:\\Users\\User\\AppData\\Local\\Temp\\claude\\C--Users-User-OneDrive-Desktop-LeUnes-Law-Firm-Project\\b9810eef-17f8-48f9-bf89-b1555345284e\\scratchpad\\serve.ps1",
+        "-Port",
+        "5173"
+      ],
+      "port": 5173
     }
   ]
 }

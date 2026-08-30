@@ -509,3 +509,48 @@ if (blogModal) {
     }
   });
 }
+
+/* =========================
+   About page: Others / LLF comparison switch
+========================= */
+
+const comparisonSwitch = document.querySelector(".comparison-switch");
+
+if (comparisonSwitch) {
+  const switchButtons = comparisonSwitch.querySelectorAll(".comparison-switch-btn");
+
+  const showPanel = (panelId) => {
+    switchButtons.forEach((button) => {
+      const target = document.getElementById(button.getAttribute("aria-controls"));
+      const isActive = button.getAttribute("aria-controls") === panelId;
+
+      button.classList.toggle("active", isActive);
+      button.setAttribute("aria-selected", isActive ? "true" : "false");
+
+      if (target) {
+        target.classList.toggle("active", isActive);
+        target.hidden = !isActive;
+      }
+    });
+  };
+
+  switchButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      showPanel(button.getAttribute("aria-controls"));
+    });
+  });
+
+  // Left/right arrows move between the two options, matching tablist behaviour.
+  comparisonSwitch.addEventListener("keydown", (e) => {
+    if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+
+    const buttons = Array.from(switchButtons);
+    const currentIndex = buttons.indexOf(document.activeElement);
+    if (currentIndex === -1) return;
+
+    e.preventDefault();
+    const nextIndex = (currentIndex + (e.key === "ArrowRight" ? 1 : -1) + buttons.length) % buttons.length;
+    buttons[nextIndex].focus();
+    showPanel(buttons[nextIndex].getAttribute("aria-controls"));
+  });
+}

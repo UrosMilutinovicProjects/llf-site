@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p /c/Users/user/AppData/Local/Temp/claude/C--Users-user-Desktop-LeUnes-Law-Firm-Project/bccd6315-0f74-4aa9-ab77-e226494130f8/scratchpad)",
+      "Bash(cat)",
+      "Bash(grep -n \"viewport\" \"C:\\\\Users\\\\user\\\\Desktop\\\\LeUnes Law Firm Project\\\\\"*.html)",
+      "Bash(python3)",
+      "mcp__16ae9695-f416-4c18-b876-c80098029fdc__search_threads"
+    ]
+  }
+}
